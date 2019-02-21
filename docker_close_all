@@ -1,0 +1,13 @@
+########################################
+########################################
+#
+# This script is intended to be called 
+# once you are finished running your  
+# docker container. It will ensure that  
+# all resources are released and that the  
+# containers are properly shut down.
+#
+########################################
+########################################
+./docker_stop_all
+docker rm $(docker ps -q -a)
